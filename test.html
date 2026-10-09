@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Typing test | KeyStrike</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <a href="index.html" class="brand"><span class="brand__mark" aria-hidden="true"></span>KeyStrike</a>
+      <span class="header__note" id="setupLabel"></span>
+    </header>
+
+    <dl class="live">
+      <div><dt>Time left</dt><dd id="timerVal">30</dd></div>
+      <div><dt>WPM</dt><dd id="wpmLive">0</dd></div>
+      <div><dt>Accuracy</dt><dd id="accLive">100%</dd></div>
+      <div><dt>Mistakes</dt><dd id="errLive">0</dd></div>
+    </dl>
+
+    <div class="words-wrap" id="wordsWrap">
+      <div class="words" id="wordDisplay" aria-hidden="true"></div>
+      <p class="focus-hint" id="focusHint" hidden>Click here to keep typing</p>
+    </div>
+
+    <label class="visually-hidden" for="typingInput">Type the text shown above</label>
+    <input type="text" id="typingInput" class="typing-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+
+    <p class="test-tip">The timer starts on your first key. Backspace works, but every wrong key still counts against accuracy. Press Esc to leave.</p>
+
+    <div class="keyboard" id="keyboard" aria-hidden="true"></div>
+
+    <div class="actions">
+      <button type="button" class="btn" id="restartBtn"><span class="restart-icon" aria-hidden="true"></span>New text</button>
+      <a href="index.html" class="btn btn--quiet">Change settings</a>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/words.js"></script>
+  <script src="js/keyboard.js"></script>
+  <script src="js/test.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KeyStrike | Typing speed test</title>
+  <meta name="description" content="A typing speed test with words, quotes, code, numbers, and symbols. Best scores stay in your browser.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <a href="index.html" class="brand"><span class="brand__mark" aria-hidden="true"></span>KeyStrike</a>
+      <span class="header__note">Typing speed test</span>
+    </header>
+
+    <div class="home">
+      <section class="home__intro">
+        <h1 class="home__title">How fast can you type?</h1>
+        <p class="home__lede">Pick what to type and for how long. Words per minute counts only the characters you got right.</p>
+        <a href="test.html" class="btn btn--primary btn--large" id="startBtn">Start test<span class="arrow-icon" aria-hidden="true"></span></a>
+      </section>
+
+      <section class="home__settings" aria-label="Test settings">
+        <div class="setting">
+          <p class="setting__label" id="modeLabel">Text</p>
+          <div class="choices" role="group" aria-labelledby="modeLabel">
+            <button type="button" class="choice" data-setting="mode" data-value="normal">Words</button>
+            <button type="button" class="choice" data-setting="mode" data-value="quote">Quote</button>
+            <button type="button" class="choice" data-setting="mode" data-value="code">Code</button>
+            <button type="button" class="choice" data-setting="mode" data-value="numbers">Numbers</button>
+            <button type="button" class="choice" data-setting="mode" data-value="symbols">Symbols</button>
+          </div>
+        </div>
+
+        <div class="setting">
+          <p class="setting__label" id="levelLabel">Level</p>
+          <div class="choices" role="group" aria-labelledby="levelLabel">
+            <button type="button" class="choice" data-setting="level" data-value="easy">Easy</button>
+            <button type="button" class="choice" data-setting="level" data-value="medium">Medium</button>
+            <button type="button" class="choice" data-setting="level" data-value="hard">Hard</button>
+          </div>
+        </div>
+
+        <div class="setting">
+          <p class="setting__label" id="timeLabel">Time</p>
+          <div class="choices" role="group" aria-labelledby="timeLabel">
+            <button type="button" class="choice" data-setting="time" data-value="15">15 sec</button>
+            <button type="button" class="choice" data-setting="time" data-value="30">30 sec</button>
+            <button type="button" class="choice" data-setting="time" data-value="60">60 sec</button>
+          </div>
+        </div>
+
+        <div class="setting">
+          <p class="setting__label">Best scores</p>
+          <ol class="scores" id="bestScores"></ol>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
